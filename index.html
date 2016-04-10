@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Phaser Boilerplate</title>
+
+        <!-- add in some crumby styles -->
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+                
+                background: #111;
+                color: #fff;
+
+                font: 500 16px/1em Verdana, sans-serif;
+                text-align: center;
+            }
+
+            #wrap {
+                margin: 0 auto;
+                padding: 1em 0;
+                width: 768px;
+            }
+
+                #stage {
+                    width: 768px;
+                    height: 720px;
+                    overflow: hidden;
+
+                    background: #222;
+                    border-radius: 3px;
+                }
+        </style>
+
+        <!-- load in phaser and the game -->
+        <script src="http://cdn.jsdelivr.net/phaser/2.4.6/phaser.min.js"></script>
+        <script src="js/game.min.js"></script>
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- set the stage -->
+            <div id="stage"></div>
+
+            <!-- let em know how to play -->
+            <div id="instuctions">
+                <p>move with arrow keys, spacebar to jump, control to fire</p>
+            </div>
+        </div>
+
+        <!-- fire at will -->
+        <script type="text/javascript">
+            document.onreadystatechange = function () {
+                if (document.readyState === 'complete') {
+                    // fire off game load
+                    console.log('loading game...')
+                }
+            }
+        </script>
+    </body>
+</html>
