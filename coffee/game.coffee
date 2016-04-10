@@ -18,8 +18,8 @@ loadState =
         loading.anchor.setTo 0.5, 0.5
         loading.text = 'loading'
 
-        game.load.image 'wall', '/images/wall.gif'
-        game.load.image 'player', '/images/player.gif'
+        game.load.image 'wall', 'images/wall.gif'
+        game.load.image 'player', 'images/player.gif'
 
     create: ->
         game.state.start 'play'
