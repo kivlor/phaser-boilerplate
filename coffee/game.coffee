@@ -18,6 +18,8 @@ loadState =
         loading.anchor.setTo 0.5, 0.5
         loading.text = 'loading'
 
+        game.load.audio 'jump', 'audio/jump.mp3'
+
         game.load.image 'wall', 'images/wall.gif'
         game.load.image 'player', 'images/player.gif'
 
@@ -72,7 +74,9 @@ playState =
         else
             @.player.body.velocity.x = 0
         
-        if @.jumpKey.isDown and @.player.body.touching.down then @.player.body.velocity.y = -300
+        if @.jumpKey.isDown and @.player.body.touching.down
+            @.player.body.velocity.y = -300
+            game.sound.play 'jump'
 
     killPlayer: ->
         game.state.start 'play'
